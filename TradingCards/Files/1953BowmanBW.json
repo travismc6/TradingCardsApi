@@ -1,0 +1,330 @@
+{
+  "Year": 1953,
+  "Brand": "Bowman",
+  "Name": "Bowman B&W",
+  "Description": "The Bowman Black & White baseball card set was released in 1953. The set consisted of 64 baseball cards and each card from the 1953 Bowman Black & White baseball card set is listed below.",
+  "ExternalImageFrontBaseUrl": "https://www.tcdb.com/Images/Cards/Baseball/28/28-{number}Fr.jpg",
+  "ExternalImageBackBaseUrl": "https://www.tcdb.com/Images/Cards/Baseball/28/28-{number}Bk.jpg",
+  "Cards": [
+    {
+      "Number": "1",
+      "Name": "Gus Bell",
+      "Notes": ""
+    },
+    {
+      "Number": "2",
+      "Name": "Willard Nixon",
+      "Notes": ""
+    },
+    {
+      "Number": "3",
+      "Name": "Bill Rigney",
+      "Notes": ""
+    },
+    {
+      "Number": "4",
+      "Name": "Pat Mullin",
+      "Notes": ""
+    },
+    {
+      "Number": "5",
+      "Name": "Dee Fondy",
+      "Notes": ""
+    },
+    {
+      "Number": "6",
+      "Name": "Ray Murray",
+      "Notes": ""
+    },
+    {
+      "Number": "7",
+      "Name": "Andy Seminick",
+      "Notes": ""
+    },
+    {
+      "Number": "8",
+      "Name": "Pete Suder",
+      "Notes": ""
+    },
+    {
+      "Number": "9",
+      "Name": "Walt Masterson",
+      "Notes": ""
+    },
+    {
+      "Number": "10",
+      "Name": "Dick Sisler",
+      "Notes": ""
+    },
+    {
+      "Number": "11",
+      "Name": "Dick Gernert",
+      "Notes": ""
+    },
+    {
+      "Number": "12",
+      "Name": "Randy Jackson",
+      "Notes": ""
+    },
+    {
+      "Number": "13",
+      "Name": "Joe Tipton",
+      "Notes": ""
+    },
+    {
+      "Number": "14",
+      "Name": "Bill Nicholson",
+      "Notes": ""
+    },
+    {
+      "Number": "15",
+      "Name": "Johnny Mize",
+      "Notes": ""
+    },
+    {
+      "Number": "16",
+      "Name": "Stu Miller",
+      "Notes": ""
+    },
+    {
+      "Number": "17",
+      "Name": "Virgil Trucks",
+      "Notes": ""
+    },
+    {
+      "Number": "18",
+      "Name": "Billy Hoeft",
+      "Notes": ""
+    },
+    {
+      "Number": "19",
+      "Name": "Paul LaPalme",
+      "Notes": ""
+    },
+    {
+      "Number": "20",
+      "Name": "Eddie Robinson",
+      "Notes": ""
+    },
+    {
+      "Number": "21",
+      "Name": "Bud Podbielan",
+      "Notes": "Clarence Podbielan on Card"
+    },
+    {
+      "Number": "22",
+      "Name": "Matt Batts",
+      "Notes": ""
+    },
+    {
+      "Number": "23",
+      "Name": "Vinegar Bend Mizell",
+      "Notes": "Wilmer Mizell on Card"
+    },
+    {
+      "Number": "24",
+      "Name": "Del Wilber",
+      "Notes": ""
+    },
+    {
+      "Number": "25",
+      "Name": "Johnny Sain",
+      "Notes": ""
+    },
+    {
+      "Number": "26",
+      "Name": "Preacher Roe",
+      "Notes": ""
+    },
+    {
+      "Number": "27",
+      "Name": "Bob Lemon",
+      "Notes": ""
+    },
+    {
+      "Number": "28",
+      "Name": "Hoyt Wilhelm",
+      "Notes": ""
+    },
+    {
+      "Number": "29",
+      "Name": "Sid Hudson",
+      "Notes": ""
+    },
+    {
+      "Number": "30",
+      "Name": "Walker Cooper",
+      "Notes": ""
+    },
+    {
+      "Number": "31",
+      "Name": "Gene Woodling",
+      "Notes": ""
+    },
+    {
+      "Number": "32",
+      "Name": "Rocky Bridges",
+      "Notes": ""
+    },
+    {
+      "Number": "33",
+      "Name": "Bob Kuzava",
+      "Notes": ""
+    },
+    {
+      "Number": "34",
+      "Name": "Ebba St. Claire",
+      "Notes": ""
+    },
+    {
+      "Number": "35",
+      "Name": "Johnny Wyrostek",
+      "Notes": ""
+    },
+    {
+      "Number": "36",
+      "Name": "Jimmy Piersall",
+      "Notes": ""
+    },
+    {
+      "Number": "37",
+      "Name": "Hal Jeffcoat",
+      "Notes": ""
+    },
+    {
+      "Number": "38",
+      "Name": "Dave Cole",
+      "Notes": ""
+    },
+    {
+      "Number": "39",
+      "Name": "Casey Stengel",
+      "Notes": "Manager Card"
+    },
+    {
+      "Number": "40",
+      "Name": "Larry Jansen",
+      "Notes": ""
+    },
+    {
+      "Number": "41",
+      "Name": "Bob Ramazzotti",
+      "Notes": ""
+    },
+    {
+      "Number": "42",
+      "Name": "Howie Judson",
+      "Notes": ""
+    },
+    {
+      "Number": "43",
+      "Name": "Hal Bevan",
+      "Notes": ""
+    },
+    {
+      "Number": "44",
+      "Name": "Jim Delsing",
+      "Notes": ""
+    },
+    {
+      "Number": "45",
+      "Name": "Irv Noren",
+      "Notes": ""
+    },
+    {
+      "Number": "46",
+      "Name": "Bucky Harris",
+      "Notes": "Manager Card"
+    },
+    {
+      "Number": "47",
+      "Name": "Jack Lohrke",
+      "Notes": ""
+    },
+    {
+      "Number": "48",
+      "Name": "Steve Ridzik",
+      "Notes": ""
+    },
+    {
+      "Number": "49",
+      "Name": "Floyd Baker",
+      "Notes": ""
+    },
+    {
+      "Number": "50",
+      "Name": "Dutch Leonard",
+      "Notes": ""
+    },
+    {
+      "Number": "51",
+      "Name": "Lew Burdette",
+      "Notes": ""
+    },
+    {
+      "Number": "52",
+      "Name": "Ralph Branca",
+      "Notes": ""
+    },
+    {
+      "Number": "53",
+      "Name": "Morrie Martin",
+      "Notes": ""
+    },
+    {
+      "Number": "54",
+      "Name": "Bill Miller",
+      "Notes": ""
+    },
+    {
+      "Number": "55",
+      "Name": "Don Johnson",
+      "Notes": ""
+    },
+    {
+      "Number": "56",
+      "Name": "Roy Smalley",
+      "Notes": ""
+    },
+    {
+      "Number": "57",
+      "Name": "Andy Pafko",
+      "Notes": ""
+    },
+    {
+      "Number": "58",
+      "Name": "Jim Konstanty",
+      "Notes": ""
+    },
+    {
+      "Number": "59",
+      "Name": "Duane Pillette",
+      "Notes": ""
+    },
+    {
+      "Number": "60",
+      "Name": "Billy Cox",
+      "Notes": ""
+    },
+    {
+      "Number": "61",
+      "Name": "Tom Gorman",
+      "Notes": ""
+    },
+    {
+      "Number": "62",
+      "Name": "Kite Thomas",
+      "Notes": "Keith Thomas on Card"
+    },
+    {
+      "Number": "63",
+      "Name": "Steve Gromek",
+      "Notes": ""
+    },
+    {
+      "Number": "64",
+      "Name": "Andy Hansen",
+      "Notes": ""
+    }
+  ]
+}

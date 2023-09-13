@@ -1,0 +1,810 @@
+{
+	"Year": 1953,
+	"Brand": "Bowman",
+	"Name": "Bowman Color",
+	"Description": "The Bowman Color baseball card set was released in 1953. The set consisted of 160 baseball cards and each card from the 1953 Bowman Color baseball card set is listed below. 1\tGus Bell\t\t",
+	"ExternalImageFrontBaseUrl": "https://www.tcdb.com/Images/Cards/Baseball/27/27-{number}Fr.jpg",
+	"ExternalImageBackBaseUrl": "https://www.tcdb.com/Images/Cards/Baseball/27/27-{number}Bk.jpg",
+	"Cards": [
+		{
+			"Number": "1",
+			"Name": "Davey Williams",
+			"Notes": ""
+		},
+		{
+			"Number": "2",
+			"Name": "Vic Wertz",
+			"Notes": ""
+		},
+		{
+			"Number": "3",
+			"Name": "Sam Jethroe",
+			"Notes": ""
+		},
+		{
+			"Number": "4",
+			"Name": "Art Houtteman",
+			"Notes": ""
+		},
+		{
+			"Number": "5",
+			"Name": "Sid Gordon",
+			"Notes": ""
+		},
+		{
+			"Number": "6",
+			"Name": "Joe Ginsberg",
+			"Notes": ""
+		},
+		{
+			"Number": "7",
+			"Name": "Harry Chiti",
+			"Notes": ""
+		},
+		{
+			"Number": "8",
+			"Name": "Al Rosen",
+			"Notes": ""
+		},
+		{
+			"Number": "9",
+			"Name": "Phil Rizzuto",
+			"Notes": ""
+		},
+		{
+			"Number": "10",
+			"Name": "Richie Ashburn",
+			"Notes": ""
+		},
+		{
+			"Number": "11",
+			"Name": "Bobby Shantz",
+			"Notes": ""
+		},
+		{
+			"Number": "12",
+			"Name": "Carl Erskine",
+			"Notes": ""
+		},
+		{
+			"Number": "13",
+			"Name": "Gus Zernial",
+			"Notes": ""
+		},
+		{
+			"Number": "14",
+			"Name": "Billy Loes",
+			"Notes": ""
+		},
+		{
+			"Number": "15",
+			"Name": "Jim Busby",
+			"Notes": ""
+		},
+		{
+			"Number": "16",
+			"Name": "Bob Friend",
+			"Notes": ""
+		},
+		{
+			"Number": "17",
+			"Name": "Gerry Staley",
+			"Notes": ""
+		},
+		{
+			"Number": "18",
+			"Name": "Nellie Fox",
+			"Notes": ""
+		},
+		{
+			"Number": "19",
+			"Name": "Alvin Dark",
+			"Notes": ""
+		},
+		{
+			"Number": "20",
+			"Name": "Don Lenhardt",
+			"Notes": ""
+		},
+		{
+			"Number": "21",
+			"Name": "Joe Garagiola",
+			"Notes": ""
+		},
+		{
+			"Number": "22",
+			"Name": "Bob Porterfield",
+			"Notes": ""
+		},
+		{
+			"Number": "23",
+			"Name": "Herm Wehmeier",
+			"Notes": "Herman Wehmeier on Card"
+		},
+		{
+			"Number": "24",
+			"Name": "Jackie Jensen",
+			"Notes": ""
+		},
+		{
+			"Number": "25",
+			"Name": "Hoot Evers",
+			"Notes": ""
+		},
+		{
+			"Number": "26",
+			"Name": "Roy McMillan",
+			"Notes": ""
+		},
+		{
+			"Number": "27",
+			"Name": "Vic Raschi",
+			"Notes": ""
+		},
+		{
+			"Number": "28",
+			"Name": "Smoky Burgess",
+			"Notes": ""
+		},
+		{
+			"Number": "29",
+			"Name": "Bobby Avila",
+			"Notes": ""
+		},
+		{
+			"Number": "30",
+			"Name": "Phil Cavarretta",
+			"Notes": ""
+		},
+		{
+			"Number": "31",
+			"Name": "Jimmy Dykes",
+			"Notes": "Manager Card"
+		},
+		{
+			"Number": "32",
+			"Name": "Stan Musial",
+			"Notes": ""
+		},
+		{
+			"Number": "33",
+			"Name": "Pee Wee Reese",
+			"Notes": ""
+		},
+		{
+			"Number": "34",
+			"Name": "Gil Coan",
+			"Notes": ""
+		},
+		{
+			"Number": "35",
+			"Name": "Mickey McDermott",
+			"Notes": "Maurice McDermott on Card"
+		},
+		{
+			"Number": "36",
+			"Name": "Minnie Minoso",
+			"Notes": ""
+		},
+		{
+			"Number": "37",
+			"Name": "Jim Wilson",
+			"Notes": ""
+		},
+		{
+			"Number": "38",
+			"Name": "Harry Byrd",
+			"Notes": ""
+		},
+		{
+			"Number": "39",
+			"Name": "Paul Richards",
+			"Notes": "Manager Card"
+		},
+		{
+			"Number": "40",
+			"Name": "Larry Doby",
+			"Notes": ""
+		},
+		{
+			"Number": "41",
+			"Name": "Sammy White",
+			"Notes": ""
+		},
+		{
+			"Number": "42",
+			"Name": "Tommy Brown",
+			"Notes": ""
+		},
+		{
+			"Number": "43",
+			"Name": "Mike Garcia",
+			"Notes": ""
+		},
+		{
+			"Number": "44",
+			"Name": "Yogi Berra , Mickey Mantle  , Hank Bauer",
+			"Notes": "Three Player Card"
+		},
+		{
+			"Number": "45",
+			"Name": "Walt Dropo",
+			"Notes": ""
+		},
+		{
+			"Number": "46",
+			"Name": "Roy Campanella",
+			"Notes": ""
+		},
+		{
+			"Number": "47",
+			"Name": "Ned Garver",
+			"Notes": ""
+		},
+		{
+			"Number": "48",
+			"Name": "Hank Sauer",
+			"Notes": ""
+		},
+		{
+			"Number": "49",
+			"Name": "Eddie Stanky",
+			"Notes": "Manager Card"
+		},
+		{
+			"Number": "50",
+			"Name": "Lou Kretlow",
+			"Notes": ""
+		},
+		{
+			"Number": "51",
+			"Name": "Monte Irvin",
+			"Notes": ""
+		},
+		{
+			"Number": "52",
+			"Name": "Marty Marion",
+			"Notes": "Manager Card"
+		},
+		{
+			"Number": "53",
+			"Name": "Del Rice",
+			"Notes": ""
+		},
+		{
+			"Number": "54",
+			"Name": "Chico Carrasquel",
+			"Notes": ""
+		},
+		{
+			"Number": "55",
+			"Name": "Leo Durocher",
+			"Notes": "Manager Card"
+		},
+		{
+			"Number": "56",
+			"Name": "Bob Cain",
+			"Notes": ""
+		},
+		{
+			"Number": "57",
+			"Name": "Lou Boudreau",
+			"Notes": "Manager Card"
+		},
+		{
+			"Number": "58",
+			"Name": "Willard Marshall",
+			"Notes": ""
+		},
+		{
+			"Number": "59",
+			"Name": "Mickey Mantle",
+			"Notes": ""
+		},
+		{
+			"Number": "60",
+			"Name": "Granny Hamner",
+			"Notes": ""
+		},
+		{
+			"Number": "61",
+			"Name": "George Kell",
+			"Notes": ""
+		},
+		{
+			"Number": "62",
+			"Name": "Ted Kluszewski",
+			"Notes": ""
+		},
+		{
+			"Number": "63",
+			"Name": "Gil McDougald",
+			"Notes": ""
+		},
+		{
+			"Number": "64",
+			"Name": "Curt Simmons",
+			"Notes": ""
+		},
+		{
+			"Number": "65",
+			"Name": "Robin Roberts",
+			"Notes": ""
+		},
+		{
+			"Number": "66",
+			"Name": "Mel Parnell",
+			"Notes": ""
+		},
+		{
+			"Number": "67",
+			"Name": "Mel Clark",
+			"Notes": ""
+		},
+		{
+			"Number": "68",
+			"Name": "Allie Reynolds",
+			"Notes": ""
+		},
+		{
+			"Number": "69",
+			"Name": "Charlie Grimm",
+			"Notes": "Manager Card"
+		},
+		{
+			"Number": "70",
+			"Name": "Clint Courtney",
+			"Notes": ""
+		},
+		{
+			"Number": "71",
+			"Name": "Paul Minner",
+			"Notes": ""
+		},
+		{
+			"Number": "72",
+			"Name": "Ted Gray",
+			"Notes": ""
+		},
+		{
+			"Number": "73",
+			"Name": "Billy Pierce",
+			"Notes": ""
+		},
+		{
+			"Number": "74",
+			"Name": "Don Mueller",
+			"Notes": ""
+		},
+		{
+			"Number": "75",
+			"Name": "Saul Rogovin",
+			"Notes": ""
+		},
+		{
+			"Number": "76",
+			"Name": "Jim Hearn",
+			"Notes": ""
+		},
+		{
+			"Number": "77",
+			"Name": "Mickey Grasso",
+			"Notes": ""
+		},
+		{
+			"Number": "78",
+			"Name": "Carl Furillo",
+			"Notes": ""
+		},
+		{
+			"Number": "79",
+			"Name": "Ray Boone",
+			"Notes": ""
+		},
+		{
+			"Number": "80",
+			"Name": "Ralph Kiner",
+			"Notes": ""
+		},
+		{
+			"Number": "81",
+			"Name": "Enos Slaughter",
+			"Notes": ""
+		},
+		{
+			"Number": "82",
+			"Name": "Joe Astroth",
+			"Notes": ""
+		},
+		{
+			"Number": "83",
+			"Name": "Jack Daniels",
+			"Notes": ""
+		},
+		{
+			"Number": "84",
+			"Name": "Hank Bauer",
+			"Notes": ""
+		},
+		{
+			"Number": "85",
+			"Name": "Solly Hemus",
+			"Notes": ""
+		},
+		{
+			"Number": "86",
+			"Name": "Harry Simpson",
+			"Notes": ""
+		},
+		{
+			"Number": "87",
+			"Name": "Harry Perkowski",
+			"Notes": ""
+		},
+		{
+			"Number": "88",
+			"Name": "Joe Dobson",
+			"Notes": ""
+		},
+		{
+			"Number": "89",
+			"Name": "Sandy Consuegra",
+			"Notes": ""
+		},
+		{
+			"Number": "90",
+			"Name": "Joe Nuxhall",
+			"Notes": ""
+		},
+		{
+			"Number": "91",
+			"Name": "Steve Souchock",
+			"Notes": ""
+		},
+		{
+			"Number": "92",
+			"Name": "Gil Hodges",
+			"Notes": ""
+		},
+		{
+			"Number": "93",
+			"Name": "Billy Martin  , Phil Rizzuto",
+			"Notes": ""
+		},
+		{
+			"Number": "94",
+			"Name": "Bob Addis",
+			"Notes": ""
+		},
+		{
+			"Number": "95",
+			"Name": "Wally Moses",
+			"Notes": ""
+		},
+		{
+			"Number": "96",
+			"Name": "Sal Maglie",
+			"Notes": ""
+		},
+		{
+			"Number": "97",
+			"Name": "Eddie Mathews",
+			"Notes": ""
+		},
+		{
+			"Number": "98",
+			"Name": "Hector Rodriguez",
+			"Notes": ""
+		},
+		{
+			"Number": "99",
+			"Name": "Warren Spahn",
+			"Notes": ""
+		},
+		{
+			"Number": "100",
+			"Name": "Bill Wight",
+			"Notes": ""
+		},
+		{
+			"Number": "101",
+			"Name": "Red Schoendienst",
+			"Notes": ""
+		},
+		{
+			"Number": "102",
+			"Name": "Jim Hegan",
+			"Notes": ""
+		},
+		{
+			"Number": "103",
+			"Name": "Del Ennis",
+			"Notes": ""
+		},
+		{
+			"Number": "104",
+			"Name": "Luke Easter",
+			"Notes": ""
+		},
+		{
+			"Number": "105",
+			"Name": "Eddie Joost",
+			"Notes": ""
+		},
+		{
+			"Number": "106",
+			"Name": "Ken Raffensberger",
+			"Notes": ""
+		},
+		{
+			"Number": "107",
+			"Name": "Alex Kellner",
+			"Notes": ""
+		},
+		{
+			"Number": "108",
+			"Name": "Bobby Adams",
+			"Notes": ""
+		},
+		{
+			"Number": "109",
+			"Name": "Ken Wood",
+			"Notes": ""
+		},
+		{
+			"Number": "110",
+			"Name": "Bob Rush",
+			"Notes": ""
+		},
+		{
+			"Number": "111",
+			"Name": "Jim Dyck",
+			"Notes": ""
+		},
+		{
+			"Number": "112",
+			"Name": "Toby Atwell",
+			"Notes": ""
+		},
+		{
+			"Number": "113",
+			"Name": "Karl Drews",
+			"Notes": ""
+		},
+		{
+			"Number": "114",
+			"Name": "Bob Feller",
+			"Notes": ""
+		},
+		{
+			"Number": "115",
+			"Name": "Cloyd Boyer",
+			"Notes": ""
+		},
+		{
+			"Number": "116",
+			"Name": "Eddie Yost",
+			"Notes": ""
+		},
+		{
+			"Number": "117",
+			"Name": "Duke Snider",
+			"Notes": ""
+		},
+		{
+			"Number": "118",
+			"Name": "Billy Martin",
+			"Notes": ""
+		},
+		{
+			"Number": "119",
+			"Name": "Dale Mitchell",
+			"Notes": ""
+		},
+		{
+			"Number": "120",
+			"Name": "Marlin Stuart",
+			"Notes": ""
+		},
+		{
+			"Number": "121",
+			"Name": "Yogi Berra",
+			"Notes": ""
+		},
+		{
+			"Number": "122",
+			"Name": "Bill Serena",
+			"Notes": ""
+		},
+		{
+			"Number": "123",
+			"Name": "Johnny Lipon",
+			"Notes": ""
+		},
+		{
+			"Number": "124",
+			"Name": "Chuck Dressen",
+			"Notes": "Manager Card"
+		},
+		{
+			"Number": "125",
+			"Name": "Fred Hatfield",
+			"Notes": ""
+		},
+		{
+			"Number": "126",
+			"Name": "Al Corwin",
+			"Notes": ""
+		},
+		{
+			"Number": "127",
+			"Name": "Dick Kryhoski",
+			"Notes": ""
+		},
+		{
+			"Number": "128",
+			"Name": "Whitey Lockman",
+			"Notes": ""
+		},
+		{
+			"Number": "129",
+			"Name": "Russ Meyer",
+			"Notes": ""
+		},
+		{
+			"Number": "130",
+			"Name": "Cass Michaels",
+			"Notes": ""
+		},
+		{
+			"Number": "131",
+			"Name": "Connie Ryan",
+			"Notes": ""
+		},
+		{
+			"Number": "132",
+			"Name": "Fred Hutchinson",
+			"Notes": ""
+		},
+		{
+			"Number": "133",
+			"Name": "Willie Jones",
+			"Notes": ""
+		},
+		{
+			"Number": "134",
+			"Name": "Johnny Pesky",
+			"Notes": ""
+		},
+		{
+			"Number": "135",
+			"Name": "Bobby Morgan",
+			"Notes": ""
+		},
+		{
+			"Number": "136",
+			"Name": "Jim Brideweser",
+			"Notes": ""
+		},
+		{
+			"Number": "137",
+			"Name": "Sam Dente",
+			"Notes": ""
+		},
+		{
+			"Number": "138",
+			"Name": "Bubba Church",
+			"Notes": ""
+		},
+		{
+			"Number": "139",
+			"Name": "Pete Runnels",
+			"Notes": ""
+		},
+		{
+			"Number": "140",
+			"Name": "Al Brazle",
+			"Notes": ""
+		},
+		{
+			"Number": "141",
+			"Name": "Spec Shea",
+			"Notes": "Frank Shea on Card"
+		},
+		{
+			"Number": "142",
+			"Name": "Larry Miggins",
+			"Notes": ""
+		},
+		{
+			"Number": "143",
+			"Name": "Al Lopez",
+			"Notes": "Manager Card"
+		},
+		{
+			"Number": "144",
+			"Name": "Warren Hacker",
+			"Notes": ""
+		},
+		{
+			"Number": "145",
+			"Name": "George Shuba",
+			"Notes": ""
+		},
+		{
+			"Number": "146",
+			"Name": "Early Wynn",
+			"Notes": ""
+		},
+		{
+			"Number": "147",
+			"Name": "Clem Koshorek",
+			"Notes": ""
+		},
+		{
+			"Number": "148",
+			"Name": "Billy Goodman",
+			"Notes": ""
+		},
+		{
+			"Number": "149",
+			"Name": "Al Corwin",
+			"Notes": ""
+		},
+		{
+			"Number": "150",
+			"Name": "Carl Scheib",
+			"Notes": ""
+		},
+		{
+			"Number": "151",
+			"Name": "Joe Adcock",
+			"Notes": ""
+		},
+		{
+			"Number": "152",
+			"Name": "Clyde Vollmer",
+			"Notes": ""
+		},
+		{
+			"Number": "153",
+			"Name": "Whitey Ford",
+			"Notes": ""
+		},
+		{
+			"Number": "154",
+			"Name": "Turk Lown",
+			"Notes": ""
+		},
+		{
+			"Number": "155",
+			"Name": "Allie Clark",
+			"Notes": ""
+		},
+		{
+			"Number": "156",
+			"Name": "Max Surkont",
+			"Notes": ""
+		},
+		{
+			"Number": "157",
+			"Name": "Sherm Lollar",
+			"Notes": ""
+		},
+		{
+			"Number": "158",
+			"Name": "Howie Fox",
+			"Notes": "Howard Fox on Card"
+		},
+		{
+			"Number": "159",
+			"Name": "Mickey Vernon",
+			"Notes": "Error Card (Picture is Floyd Baker)"
+		},
+		{
+			"Number": "160",
+			"Name": "Cal Abrams",
+			"Notes": ""
+		}
+	]
+}
