@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using TradingCards.Models.Domain;
 using TradingCards.Models.Dtos;
 
@@ -12,10 +13,13 @@ namespace TradingCards.Persistence
             _context = context;
         }
 
-        public async Task<ICollection<CardDto>> GetCards(CardParams userParams)
+        public async Task<ICollection<CardDto>> GetCards([FromQuery] CardParams userParams)
         {
             return await (from card in _context.Cards
-                         join collectionCard in _context.CollectionCards
+                          where (!userParams.Year.HasValue || card.CardSet.Year == userParams.Year.Value)
+                          &&  (userParams.Brands == null || !userParams.Brands!.Any() || userParams.Brands!.Contains(card.CardSet.BrandId) )
+                          && (string.IsNullOrEmpty(userParams.Name) || card.Name.ToLower().Contains(userParams.Name.ToLower()))
+                          join collectionCard in _context.CollectionCards
                          on card.Id equals collectionCard.CardId into collectionGroup
                          from collectionCard in collectionGroup.DefaultIfEmpty()
                          select new CardDto
