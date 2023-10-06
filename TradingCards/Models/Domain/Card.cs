@@ -11,6 +11,10 @@ namespace TradingCards.Models.Domain
         public string Notes { get; set; }
         public int CardSetId { get; set; }
 
+        public string? FrontImageUrl { get; set; }
+        public string? BackImageUrl { get; set; }
+
+
         [JsonIgnore]
         public CardSet CardSet { get; set; }
 

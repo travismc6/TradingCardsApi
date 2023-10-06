@@ -13,7 +13,71 @@ namespace TradingCards.Persistence
             _context = context;
         }
 
-        public async Task<ICollection<CardDto>> GetCards([FromQuery] CardParams userParams)
+        public async Task<CollectionCardDto> GetCollectionCardByCardId(int id, string userId)
+        {
+            var collectionCard = await _context.CollectionCards.Include(r => r.Card).Include(r => r.Card.CardSet).FirstOrDefaultAsync(r => r.CardId == id);
+
+            if (collectionCard == null)
+            {
+                throw new InvalidOperationException("Card not found.");
+            }
+
+            return await GetCollectionCard(collectionCard.Id, userId);
+        }
+
+        public async Task<CollectionCardDto> GetCollectionCard(int id, string userId)
+        {
+            // if card is not in collection (or another collection), return error
+            var collection = _context.Collections.FirstOrDefault(u => u.UserId == userId);
+
+            var collectionCard = await _context.CollectionCards.Include(r => r.Card).Include(r => r.Card.CardSet).FirstOrDefaultAsync(r => r.CollectionId == collection.Id && r.Id == id);
+
+            if (collectionCard == null)
+            {
+                throw new InvalidOperationException("Card is not in your collection.");
+            }
+
+            return new CollectionCardDto
+            {
+                Id = collectionCard.Id,
+                Name = collectionCard.Card.Name,
+                Notes = collectionCard.Notes,
+                Number = collectionCard.Card.Number,
+                SetName = collectionCard.Card.CardSet.Name,
+                BrandName = collectionCard.Card.CardSet.Name,
+                Grade = collectionCard.Grade,
+                Year = collectionCard.Card.CardSet.Year,
+                FrontImageUrl = collectionCard.FrontImageUrl,
+                BackImageUrl = collectionCard.BackImageUrl,
+                DefaultFrontImageUrl = collectionCard.Card.CardSet.ExternalImageFrontBaseUrl,
+                DefaultBackImageUrl = collectionCard.Card.CardSet.ExternalImageBackBaseUrl,
+            };
+        }
+
+        public async Task<CollectionCardDto> SaveCard(CollectionCardDto card, string userId)
+        {
+            var collection = _context.Collections.FirstOrDefault(u => u.UserId == userId);
+
+            var collectionCard = await _context.CollectionCards.FirstOrDefaultAsync(r => r.Id == card.Id);
+
+            if (collectionCard == null)
+            {
+                throw new InvalidOperationException("Card is not in your collection.");
+            }
+
+            collectionCard.FrontImageUrl = card.FrontImageUrl;
+            collectionCard.BackImageUrl = card.BackImageUrl;
+            collectionCard.FrontImagePublicId = card.FrontImagePublicId;
+            collectionCard.BackImagePublicId = card.BackImagePublicId;
+            collectionCard.Notes = card.Notes;
+            collectionCard.Grade = card.Grade;
+
+            await _context.SaveChangesAsync();
+
+            return card;
+        }
+
+        public async Task<ICollection<ChecklistCardDto>> GetCards([FromQuery] CardParams userParams)
         {
             int? collectionId = null;
 
@@ -42,7 +106,7 @@ namespace TradingCards.Persistence
                               where (!userParams.Year.HasValue || card.CardSet.Year == userParams.Year.Value)
                               && (userParams.Brands == null || !userParams.Brands!.Any() || userParams.Brands!.Contains(card.CardSet.BrandId))
                               && (string.IsNullOrEmpty(userParams.Name) || card.Name.ToLower().Contains(userParams.Name.ToLower()))
-                              select new CardDto
+                              select new ChecklistCardDto
                               {
                                   Id = card.Id,
                                   Name = card.Name,
@@ -64,7 +128,7 @@ namespace TradingCards.Persistence
                              on card.Id equals collectionCard.CardId into collectionGroup
                               from collectionCard in collectionGroup.DefaultIfEmpty()
                               where (!userParams.InCollection || collectionCard != null)
-                              select new CardDto
+                              select new ChecklistCardDto
                               {
                                   Id = card.Id,
                                   Name = card.Name,

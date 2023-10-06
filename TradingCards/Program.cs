@@ -8,10 +8,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
+using TradingCards.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<ICardsRepository, CardsRepository>();
+builder.Services.AddScoped<IImageService, ImageService>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
@@ -94,7 +96,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
 
 app.UseCors(o => o.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().WithExposedHeaders("*"));
 app.UseAuthentication();

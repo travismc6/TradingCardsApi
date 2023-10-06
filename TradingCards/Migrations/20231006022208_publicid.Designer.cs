@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TradingCards.Persistence;
 
@@ -11,9 +12,11 @@ using TradingCards.Persistence;
 namespace TradingCards.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231006022208_publicid")]
+    partial class publicid
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -266,11 +269,17 @@ namespace TradingCards.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("BackImagePublicId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("BackImageUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("CardSetId")
                         .HasColumnType("int");
+
+                    b.Property<string>("FrontImagePublicId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FrontImageUrl")
                         .HasColumnType("nvarchar(max)");
@@ -358,9 +367,6 @@ namespace TradingCards.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("BackImagePublicId")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("BackImageUrl")
                         .HasColumnType("nvarchar(max)");
 
@@ -369,9 +375,6 @@ namespace TradingCards.Migrations
 
                     b.Property<int>("CollectionId")
                         .HasColumnType("int");
-
-                    b.Property<string>("FrontImagePublicId")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FrontImageUrl")
                         .HasColumnType("nvarchar(max)");
