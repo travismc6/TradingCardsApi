@@ -15,7 +15,10 @@ namespace TradingCards.Persistence
 
         public async Task<CollectionCardDto> GetCollectionCardByCardId(int id, string userId)
         {
-            var collectionCard = await _context.CollectionCards.Include(r => r.Card).Include(r => r.Card.CardSet).FirstOrDefaultAsync(r => r.CardId == id);
+            // if card is not in collection (or another collection), return error
+            var collection = _context.Collections.FirstOrDefault(u => u.UserId == userId);
+
+            var collectionCard = await _context.CollectionCards.Include(r => r.Card).Include(r => r.Card.CardSet).FirstOrDefaultAsync(r => r.CollectionId == collection.Id && r.CardId == id);
 
             if (collectionCard == null)
             {
