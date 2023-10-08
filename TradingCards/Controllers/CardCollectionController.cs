@@ -38,8 +38,6 @@ namespace TradingCards.Controllers
         [HttpPut]
         public async Task<IActionResult> SaveCollectionCard(CollectionCardDto card)
         {
-            var userName = User.Identity?.Name;
-
             var user = HttpContext.User;
             var userId = user.FindFirst("id")?.Value;
 

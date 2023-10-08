@@ -14,6 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<ICardsRepository, CardsRepository>();
 builder.Services.AddScoped<IImageService, ImageService>();
+builder.Services.AddScoped<IExportService, ExportService>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {

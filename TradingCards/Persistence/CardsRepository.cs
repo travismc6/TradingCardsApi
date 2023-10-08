@@ -80,7 +80,7 @@ namespace TradingCards.Persistence
             return card;
         }
 
-        public async Task<ICollection<ChecklistCardDto>> GetCards([FromQuery] CardParams userParams)
+        public async Task<ICollection<ChecklistCardDto>> GetChecklistCards([FromQuery] CardParams userParams)
         {
             int? collectionId = null;
 
@@ -136,11 +136,15 @@ namespace TradingCards.Persistence
                                   Id = card.Id,
                                   Name = card.Name,
                                   Notes = card.Notes,
+                                  CollectionCardNotes = collectionCard != null ? collectionCard.Notes : null,
+                                  Grade = collectionCard != null ? collectionCard.Grade : null,
                                   Number = card.Number,
                                   SetName = card.CardSet.Name,
                                   BrandId = card.CardSet.BrandId,
                                   Year = card.CardSet.Year,
-                                  InCollection = collectionCard != null
+                                  InCollection = collectionCard != null,
+                                  FrontImageUrl = collectionCard != null ? collectionCard.FrontImageUrl : null,
+                                  BackImageUrl = collectionCard != null ? collectionCard.BackImageUrl : null
                               }).ToListAsync();
             }
         }

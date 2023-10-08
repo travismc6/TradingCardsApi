@@ -16,12 +16,12 @@ namespace TradingCards.Controllers
     public class CardChecklistController : ControllerBase
     {
         private readonly ICardsRepository _repo;
-        private readonly IImageService _imageService;
+        private readonly IExportService _exportService;
 
-        public CardChecklistController(ICardsRepository repo, IImageService imageService)
+        public CardChecklistController(ICardsRepository repo, IExportService exportService)
         {
             _repo = repo;
-            _imageService = imageService;
+            _exportService = exportService;
         }
 
         [HttpGet]
@@ -30,7 +30,7 @@ namespace TradingCards.Controllers
             var user = HttpContext.User;
             cardParams.UserId = user.FindFirst("id")?.Value; 
 
-            var cards = await _repo.GetCards(cardParams);
+            var cards = await _repo.GetChecklistCards(cardParams);
 
             return Ok(cards);
         }
@@ -51,6 +51,20 @@ namespace TradingCards.Controllers
             await _repo.SaveCollection(collectionChanges);
 
             return Ok();
+        }
+
+        [HttpGet("export")]
+        public async Task<IActionResult> ExportChecklist([FromQuery] CardParams cardParams)
+        {
+            var user = HttpContext.User;
+            cardParams.UserId = user.FindFirst("id")?.Value;
+            cardParams.InCollection = true;
+
+            var cards = await _repo.GetChecklistCards(cardParams);
+
+            var result = _exportService.ExportCollection(cards.ToList());
+
+            return File(result, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "cards.xlsx");
         }
 
     }
