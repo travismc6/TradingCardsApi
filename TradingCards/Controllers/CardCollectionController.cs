@@ -25,12 +25,10 @@ namespace TradingCards.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCollectionCardByCardId(int id)
         {
-            var userName = User.Identity?.Name;
-
             var user = HttpContext.User;
             var userId = user.FindFirst("id")?.Value;
 
-            var card = await _repo.GetCollectionCardByCardId(id, userId);
+            var card = await _repo.GetCollectionCard(id, userId);
 
             return Ok(card);
         }
@@ -44,6 +42,28 @@ namespace TradingCards.Controllers
             var cards = await _repo.SaveCard(card, userId);
 
             return Ok(cards);
+        }
+
+        [HttpPut("delete/{id}")]
+        public async Task<IActionResult> DeleteCollectionCard(int id)
+        {
+            var user = HttpContext.User;
+            var userId = user.FindFirst("id")?.Value;
+
+            var result = await _repo.DeleteCard(id, userId);
+
+            return Ok();
+        }
+
+        [HttpPost("duplicate/{id}")]
+        public async Task<IActionResult> DuplicateCollectionCard(int id)
+        {
+            var user = HttpContext.User;
+            var userId = user.FindFirst("id")?.Value;
+
+            var result = await _repo.DuplicateCard(id, userId);
+
+            return Ok(result);
         }
 
         [HttpPost("image/{id}")]

@@ -7,6 +7,7 @@
         public string Name { get; set; }
         public string Notes { get; set; }
         public string? CollectionCardNotes { get; set; }
+        public int? CollectionCardId { get; set; }
         public int Year { get; set; }
         public string SetName { get; set; }
         public double? Grade { get; set; }

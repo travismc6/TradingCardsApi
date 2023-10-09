@@ -13,21 +13,6 @@ namespace TradingCards.Persistence
             _context = context;
         }
 
-        public async Task<CollectionCardDto> GetCollectionCardByCardId(int id, string userId)
-        {
-            // if card is not in collection (or another collection), return error
-            var collection = _context.Collections.FirstOrDefault(u => u.UserId == userId);
-
-            var collectionCard = await _context.CollectionCards.Include(r => r.Card).Include(r => r.Card.CardSet).FirstOrDefaultAsync(r => r.CollectionId == collection.Id && r.CardId == id);
-
-            if (collectionCard == null)
-            {
-                throw new InvalidOperationException("Card not found.");
-            }
-
-            return await GetCollectionCard(collectionCard.Id, userId);
-        }
-
         public async Task<CollectionCardDto> GetCollectionCard(int id, string userId)
         {
             // if card is not in collection (or another collection), return error
@@ -134,6 +119,7 @@ namespace TradingCards.Persistence
                               select new ChecklistCardDto
                               {
                                   Id = card.Id,
+                                  CollectionCardId = collectionCard != null ? collectionCard.Id : null,
                                   Name = card.Name,
                                   Notes = card.Notes,
                                   CollectionCardNotes = collectionCard != null ? collectionCard.Notes : null,
@@ -157,8 +143,8 @@ namespace TradingCards.Persistence
             {
                 foreach (var cardId in collectionChanges.Added)
                 {
-                    var existing = _context.CollectionCards.Where(c => c.CardId == cardId && c.CollectionId == collection.Id);
-                    if (!existing.Any())
+                    //var existing = _context.CollectionCards.Where(c => c.CardId == cardId && c.CollectionId == collection.Id);
+                    //if (!existing.Any())
                     {
                         var collectionCard = new CollectionCard
                         {
@@ -180,6 +166,52 @@ namespace TradingCards.Persistence
             await _context.SaveChangesAsync();
 
             return true;
+        }
+
+        public async Task<bool> DeleteCard(int id, string userId)
+        {
+            // if card is not in collection (or another collection), return error
+            var collection = _context.Collections.FirstOrDefault(u => u.UserId == userId);
+
+            var collectionCard = await _context.CollectionCards.Include(r => r.Card).Include(r => r.Card.CardSet).FirstOrDefaultAsync(r => r.CollectionId == collection.Id && r.Id == id);
+
+            if (collectionCard == null)
+            {
+                throw new InvalidOperationException("Card is not in your collection.");
+            }
+
+            _context.CollectionCards.Remove(collectionCard);
+
+            await _context.SaveChangesAsync();
+
+            // TODO: delete associated images
+
+            return true;
+        }
+
+        public async Task<int> DuplicateCard(int id, string userId)
+        {
+            // if card is not in collection (or another collection), return error
+            var collection = _context.Collections.FirstOrDefault(u => u.UserId == userId);
+
+            var collectionCard = await _context.CollectionCards.Include(r => r.Card).Include(r => r.Card.CardSet).FirstOrDefaultAsync(r => r.CollectionId == collection.Id && r.Id == id);
+
+            if (collectionCard == null)
+            {
+                throw new InvalidOperationException("Card is not in your collection.");
+            }
+
+            var newCollectionCard = new CollectionCard
+            {
+                CardId = collectionCard.CardId,
+                CollectionId = collectionCard.CollectionId,
+            };
+
+            await _context.CollectionCards.AddAsync(newCollectionCard);
+
+            await _context.SaveChangesAsync();
+
+            return newCollectionCard.Id;
         }
     }
 }
