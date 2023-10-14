@@ -85,22 +85,30 @@ namespace TradingCards.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestDTO model)
         {
-            ApplicationUser userFromDb = _db.ApplicationUsers
-                    .FirstOrDefault(u => u.UserName.ToLower() == model.UserName.ToLower());
+            //ApplicationUser userFromDb = _db.ApplicationUsers
+            //        .FirstOrDefault(u => u.UserName.ToLower() == model.UserName.ToLower());
+            //bool isValid = await _userManager.CheckPasswordAsync(userFromDb, model.Password);
 
-            bool isValid = await _userManager.CheckPasswordAsync(userFromDb, model.Password);
+            //if (isValid == false)
+            //{
+            //    //_response.Result = new LoginResponseDTO();
+            //    //_response.StatusCode = HttpStatusCode.BadRequest;
+            //    //_response.IsSuccess = false;
+            //    //_response.ErrorMessages.Add("Username or password is incorrect");
+            //    return BadRequest("Username or password is incorrect");
+            //}
 
-            if (isValid == false)
+            var user = await _userManager.FindByNameAsync(model.UserName);
+
+            if (user == null || !await _userManager.CheckPasswordAsync(user, model.Password) )
             {
-                //_response.Result = new LoginResponseDTO();
-                //_response.StatusCode = HttpStatusCode.BadRequest;
-                //_response.IsSuccess = false;
-                //_response.ErrorMessages.Add("Username or password is incorrect");
-                return BadRequest("Username or password is incorrect");
+                return Unauthorized();
             }
 
+
+
             //we have to generate JWT Token
-            var roles = await _userManager.GetRolesAsync(userFromDb);
+            var roles = await _userManager.GetRolesAsync(user);
             JwtSecurityTokenHandler tokenHandler = new();
             byte[] key = Encoding.ASCII.GetBytes(secretKey);
 
@@ -108,9 +116,9 @@ namespace TradingCards.Controllers
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim("fullName", userFromDb.Name),
-                    new Claim("id", userFromDb.Id.ToString()),
-                    new Claim(ClaimTypes.Email, userFromDb.UserName.ToString()),
+                    new Claim("fullName", user.Name),
+                    new Claim("id", user.Id.ToString()),
+                    new Claim(ClaimTypes.Email, user.UserName.ToString()),
                     new Claim(ClaimTypes.Role, roles.FirstOrDefault()),
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),
@@ -121,7 +129,7 @@ namespace TradingCards.Controllers
 
             LoginResponseDTO loginResponse = new()
             {
-                Email = userFromDb.Email,
+                Email = user.Email,
                 Token = tokenHandler.WriteToken(token)
             };
 
