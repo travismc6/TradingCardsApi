@@ -120,5 +120,17 @@ namespace TradingCards.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+
+
+        [HttpGet("details")]
+        public async Task<IActionResult> Details(int id)
+        {
+            var user = HttpContext.User;
+            var userId = user.FindFirst("id")?.Value;
+
+            var result = await _repo.GetCollectionSetDetails(id, userId);
+
+            return Ok(result);
+        }
     }
 }

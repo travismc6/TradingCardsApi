@@ -11,5 +11,6 @@ namespace TradingCards.Persistence
         Task<bool> DeleteCard(int id, string userId);
         Task<int> DuplicateCard(int id, string userId);
         Task<bool> SaveCollection(CollectionChangesDto collectionChanges);
+        Task<CollectionDetailsDto> GetCollectionSetDetails(int id, string userId);
     }
 }

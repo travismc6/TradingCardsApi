@@ -213,5 +213,38 @@ namespace TradingCards.Persistence
 
             return newCollectionCard.Id;
         }
+
+        public async Task<CollectionDetailsDto> GetCollectionSetDetails(int id, string userId)
+        {
+            var collection = _context.Collections.FirstOrDefault(u => u.UserId == userId);
+
+            if (collection == null)
+            {
+                throw new InvalidOperationException("Cannot find Collection.");
+            }
+
+            var details = new CollectionDetailsDto() { Id = collection.Id, TotalCards = _context.CollectionCards.Count(r=> r.CollectionId == collection.Id) };
+
+
+            var query = from cc in _context.CollectionCards
+                        join c in _context.Cards on cc.CardId equals c.Id
+                        join cs in _context.CardSets on c.CardSetId equals cs.Id
+                        where cc.CollectionId == collection.Id
+                        group cc by new { cs.Name, cs.Id, cs.Cards.Count, cs.Year } into g
+                        select new CollectionSetDetails
+                        {
+                            SetName = g.Key.Name,
+                            SetId = g.Key.Id,
+                            SetYear = g.Key.Year,
+                            CollectionCount = g.Count(),
+                            SetCount = g.Key.Count,
+                            UniqueCollectionCount = g.Select(cc => cc.CardId).Distinct().Count()
+                        };
+
+
+            details.CollectionSets = query.ToList();
+
+            return details;
+        }
     }
 }
