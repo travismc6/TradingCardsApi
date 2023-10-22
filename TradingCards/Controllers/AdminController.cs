@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using TradingCards.Models.Domain;
@@ -8,6 +9,7 @@ namespace TradingCards.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class AdminController : ControllerBase
     {
         private readonly ApplicationDbContext _db;
@@ -17,9 +19,11 @@ namespace TradingCards.Controllers
             _db = db;
         }
 
-        [HttpPost]
+        [HttpPost("cardset")]
         public async Task<IActionResult> UploadCardSet(IFormFile file)
         {
+            // TODO: Must have admin role
+
             if (file == null || file.Length == 0)
             {
                 return BadRequest("No file uploaded.");
