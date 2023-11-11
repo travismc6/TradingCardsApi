@@ -24,12 +24,13 @@ namespace TradingCards.Services
                 // Headers
                 worksheet.Cells[1, 1].Value = "#";
                 worksheet.Cells[1, 2].Value = "Year";
-                worksheet.Cells[1, 3].Value = "Set";
-                worksheet.Cells[1, 4].Value = "Player Name";
-                worksheet.Cells[1, 5].Value = "Notes";
-                worksheet.Cells[1, 6].Value = "Grade";
-                worksheet.Cells[1, 7].Value = "FrontImageUrl";
-                worksheet.Cells[1, 8].Value = "BackImageUrl";
+                worksheet.Cells[1, 3].Value = "Brand";
+                worksheet.Cells[1, 4].Value = "Set";
+                worksheet.Cells[1, 5].Value = "Player Name";
+                worksheet.Cells[1, 6].Value = "Notes";
+                worksheet.Cells[1, 7].Value = "Grade";
+                worksheet.Cells[1, 8].Value = "FrontImageUrl";
+                worksheet.Cells[1, 9].Value = "BackImageUrl";
 
                 // Insert data
                 for (int i = 0; i < cards.Count; i++)
@@ -38,12 +39,13 @@ namespace TradingCards.Services
 
                     worksheet.Cells[currentRow, 1].Value = cards[i].Number;
                     worksheet.Cells[currentRow, 2].Value = cards[i].Year;
-                    worksheet.Cells[currentRow, 3].Value = cards[i].SetName;
-                    worksheet.Cells[currentRow, 4].Value = cards[i].Name;
-                    worksheet.Cells[currentRow, 5].Value = cards[i].Notes;
-                    worksheet.Cells[currentRow, 6].Value = cards[i].Grade;
-                    worksheet.Cells[currentRow, 7].Value = cards[i].FrontImageUrl;
-                    worksheet.Cells[currentRow, 8].Value = cards[i].BackImageUrl;
+                    worksheet.Cells[currentRow, 3].Value = cards[i].BrandName;
+                    worksheet.Cells[currentRow, 4].Value = cards[i].SetName;
+                    worksheet.Cells[currentRow, 5].Value = cards[i].Name;
+                    worksheet.Cells[currentRow, 6].Value = cards[i].CollectionCardNotes;
+                    worksheet.Cells[currentRow, 7].Value = cards[i].Grade;
+                    worksheet.Cells[currentRow, 8].Value = cards[i].FrontImageUrl;
+                    worksheet.Cells[currentRow, 9].Value = cards[i].BackImageUrl;
                 }
                 package.Save();
             }

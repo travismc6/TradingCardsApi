@@ -102,6 +102,7 @@ namespace TradingCards.Persistence
                                   Number = card.Number,
                                   SetName = card.CardSet.Name,
                                   BrandId = card.CardSet.BrandId,
+                                  BrandName = card.CardSet.Brand.Name,
                                   Year = card.CardSet.Year,
                                   InCollection = false
                               }).ToListAsync();
@@ -115,7 +116,7 @@ namespace TradingCards.Persistence
                               join collectionCard in _context.CollectionCards.Where(r => r.CollectionId == collectionId)
                              on card.Id equals collectionCard.CardId into collectionGroup
                               from collectionCard in collectionGroup.DefaultIfEmpty()
-                              where (!userParams.InCollection || collectionCard != null)
+                              where (userParams.InCollection == null || (userParams.InCollection == true && collectionCard != null) || (userParams.InCollection == false && collectionCard == null))
                               select new ChecklistCardDto
                               {
                                   Id = card.Id,
@@ -127,6 +128,7 @@ namespace TradingCards.Persistence
                                   Number = card.Number,
                                   SetName = card.CardSet.Name,
                                   BrandId = card.CardSet.BrandId,
+                                  BrandName = card.CardSet.Brand.Name,
                                   Year = card.CardSet.Year,
                                   InCollection = collectionCard != null,
                                   FrontImageUrl = collectionCard != null ? collectionCard.FrontImageUrl : null,
@@ -230,7 +232,7 @@ namespace TradingCards.Persistence
                         join c in _context.Cards on cc.CardId equals c.Id
                         join cs in _context.CardSets on c.CardSetId equals cs.Id
                         where cc.CollectionId == collection.Id
-                        group cc by new { cs.Name, cs.Id, cs.Cards.Count, cs.Year } into g
+                        group cc by new { cs.Name, cs.Id, cs.Cards.Count, cs.Year, cs.BrandId } into g
                         select new CollectionSetDetails
                         {
                             SetName = g.Key.Name,
@@ -238,11 +240,12 @@ namespace TradingCards.Persistence
                             SetYear = g.Key.Year,
                             CollectionCount = g.Count(),
                             SetCount = g.Key.Count,
-                            UniqueCollectionCount = g.Select(cc => cc.CardId).Distinct().Count()
+                            UniqueCollectionCount = g.Select(cc => cc.CardId).Distinct().Count(),
+                            BrandId = g.Key.BrandId
                         };
 
 
-            details.CollectionSets = query.ToList();
+            details.CollectionSets = query.OrderBy(r => r.SetYear).ThenBy(r => r.SetName).ToList();
 
             return details;
         }

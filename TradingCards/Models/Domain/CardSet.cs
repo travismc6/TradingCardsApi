@@ -1,4 +1,7 @@
-﻿namespace TradingCards.Models.Domain
+﻿
+using Newtonsoft.Json;
+
+namespace TradingCards.Models.Domain
 {
     public class CardSet
     {
@@ -13,5 +16,7 @@
 
 
         public ICollection<Card> Cards { get; set; }
+        [JsonIgnore]
+        public Brand Brand { get; set; }
     }
 }

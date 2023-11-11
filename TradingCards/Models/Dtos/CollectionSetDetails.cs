@@ -8,5 +8,6 @@
         public int SetCount { get; set; }
         public int CollectionCount { get; set; }
         public int UniqueCollectionCount { get; set; }
+        public int BrandId { get; set; }
     }
 }
