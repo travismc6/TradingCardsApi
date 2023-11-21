@@ -15,7 +15,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<ICardsRepository, CardsRepository>();
 builder.Services.AddScoped<IImageService, ImageService>();
-builder.Services.AddScoped<IExportService, ExportService>();
+builder.Services.AddScoped<IImportExportService, ImportExportService>();
 
 string connString;
 if (builder.Environment.IsDevelopment())

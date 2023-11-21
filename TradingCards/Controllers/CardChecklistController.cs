@@ -1,13 +1,6 @@
-﻿using CloudinaryDotNet.Actions;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Security.Claims;
-using TradingCards.Helpers;
+﻿using Microsoft.AspNetCore.Mvc;
 using TradingCards.Models.Dtos;
 using TradingCards.Persistence;
-using TradingCards.Services;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace TradingCards.Controllers
 {
@@ -16,12 +9,10 @@ namespace TradingCards.Controllers
     public class CardChecklistController : ControllerBase
     {
         private readonly ICardsRepository _repo;
-        private readonly IExportService _exportService;
 
-        public CardChecklistController(ICardsRepository repo, IExportService exportService)
+        public CardChecklistController(ICardsRepository repo)
         {
             _repo = repo;
-            _exportService = exportService;
         }
 
         [HttpGet]
@@ -51,20 +42,6 @@ namespace TradingCards.Controllers
             await _repo.SaveCollection(collectionChanges);
 
             return Ok();
-        }
-
-        [HttpGet("export")]
-        public async Task<IActionResult> ExportChecklist([FromQuery] CardParams cardParams)
-        {
-            var user = HttpContext.User;
-            cardParams.UserId = user.FindFirst("id")?.Value;
-            cardParams.InCollection = true;
-
-            var cards = await _repo.GetChecklistCards(cardParams);
-
-            var result = _exportService.ExportCollection(cards.ToList());
-
-            return File(result, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "cards.xlsx");
         }
 
     }

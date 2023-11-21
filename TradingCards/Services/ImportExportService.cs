@@ -1,11 +1,12 @@
 ﻿using CloudinaryDotNet.Actions;
 using OfficeOpenXml;
 using System.IO;
+using TradingCards.Models.Domain;
 using TradingCards.Models.Dtos;
 
 namespace TradingCards.Services
 {
-    public class ExportService : IExportService
+    public class ImportExportService : IImportExportService
     {
         public MemoryStream ExportCollection(List<ChecklistCardDto> cards)
         {
@@ -52,6 +53,37 @@ namespace TradingCards.Services
 
             stream.Position = 0;
             return stream;
+        }
+
+        public IEnumerable<ChecklistCardDto> ImportCollection(IFormFile file)
+        {
+            var cards = new List<Card>();
+
+            using (var stream = new MemoryStream())
+            {
+                file.CopyTo(stream);
+
+                using (var package = new ExcelPackage(stream))
+                {
+                    ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+                    int rowCount = worksheet.Dimension.Rows;
+
+                    for (int row = 2; row <= rowCount; row++)
+                    {
+                        //cards.Add(new Card
+                        //{
+                        //    Name = worksheet.Cells[row, 1].Value.ToString().Trim(),
+                        //    Age = int.Parse(worksheet.Cells[row, 2].Value.ToString().Trim()),
+                        //    Email = worksheet.Cells[row, 3].Value.ToString().Trim()
+                        //});
+                    }
+                }
+            }
+
+
+
+
+            throw new NotImplementedException();
         }
     }
 }

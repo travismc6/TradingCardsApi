@@ -1,0 +1,1280 @@
+{
+  "year": 1949,
+  "brand": "Bowman",
+  "name": "Bowman",
+  "description": "1949 Bowman set. Color.",
+    "ExternalImageFrontBaseUrl": "https://www.tcdb.com/Images/Cards/Baseball/18/18-{number}Fr.jpg",
+  "ExternalImageBackBaseUrl": "https://www.tcdb.com/Images/Cards/Baseball/18/18-{number}Bk.jpg",
+  "cards": [
+    {
+        "number": "1",
+        "name": "Vernon Bickford",
+        "notes": "RC"
+    },
+    {
+        "number": "2",
+        "name": "Carroll \"Whitey\" Loc",
+        "notes": ""
+    },
+    {
+        "number": "3",
+        "name": "Bob Porterfield",
+        "notes": "RC"
+    },
+    {
+        "number": "4 a",
+        "name": "Jerry Priddy",
+        "notes": "RC"
+    },
+    {
+        "number": "4 b",
+        "name": "Jerry Priddy RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "5",
+        "name": "Hank Sauer",
+        "notes": ""
+    },
+    {
+        "number": "6",
+        "name": "Phil Cavarretta",
+        "notes": "RC"
+    },
+    {
+        "number": "7",
+        "name": "Joe Dobson",
+        "notes": "RC"
+    },
+    {
+        "number": "8",
+        "name": "Murry Dickson",
+        "notes": "RC"
+    },
+    {
+        "number": "9",
+        "name": "Ferris Fain",
+        "notes": ""
+    },
+    {
+        "number": "10",
+        "name": "Ted Gray",
+        "notes": "RC"
+    },
+    {
+        "number": "11",
+        "name": "Lou Boudreau RC, MGR",
+        "notes": ""
+    },
+    {
+        "number": "12",
+        "name": "Cass Michaels",
+        "notes": "RC"
+    },
+    {
+        "number": "13",
+        "name": "Bob Chesnes",
+        "notes": "RC"
+    },
+    {
+        "number": "14",
+        "name": "Curt Simmons",
+        "notes": "RC"
+    },
+    {
+        "number": "15",
+        "name": "Ned Garver",
+        "notes": "RC"
+    },
+    {
+        "number": "16",
+        "name": "Al Kozar",
+        "notes": "RC"
+    },
+    {
+        "number": "17",
+        "name": "Earl Torgeson",
+        "notes": "RC"
+    },
+    {
+        "number": "18",
+        "name": "Bobby Thomson",
+        "notes": ""
+    },
+    {
+        "number": "19",
+        "name": "Bobby Brown",
+        "notes": "RC"
+    },
+    {
+        "number": "20",
+        "name": "Gene Hermanski",
+        "notes": "RC"
+    },
+    {
+        "number": "21",
+        "name": "Frank Baumholtz RC,",
+        "notes": "UER"
+    },
+    {
+        "number": "22",
+        "name": "Harry \"P-Nuts\" Lowre",
+        "notes": "RC"
+    },
+    {
+        "number": "23",
+        "name": "Bobby Doerr",
+        "notes": ""
+    },
+    {
+        "number": "24",
+        "name": "Stan Musial",
+        "notes": ""
+    },
+    {
+        "number": "25",
+        "name": "Carl Scheib RC,",
+        "notes": "UER"
+    },
+    {
+        "number": "26",
+        "name": "George Kell",
+        "notes": "RC"
+    },
+    {
+        "number": "27",
+        "name": "Bob Feller",
+        "notes": ""
+    },
+    {
+        "number": "28",
+        "name": "Don Kolloway",
+        "notes": "RC"
+    },
+    {
+        "number": "29",
+        "name": "Ralph Kiner",
+        "notes": ""
+    },
+    {
+        "number": "30",
+        "name": "Andy Seminick",
+        "notes": "RC"
+    },
+    {
+        "number": "31",
+        "name": "Dick Kokos",
+        "notes": "RC"
+    },
+    {
+        "number": "32",
+        "name": "Eddie Yost",
+        "notes": "RC"
+    },
+    {
+        "number": "33",
+        "name": "Warren Spahn",
+        "notes": ""
+    },
+    {
+        "number": "34",
+        "name": "Dave Koslo",
+        "notes": ""
+    },
+    {
+        "number": "35",
+        "name": "Vic Raschi",
+        "notes": "RC"
+    },
+    {
+        "number": "36",
+        "name": "Harold \"Peewee\" Rees",
+        "notes": ""
+    },
+    {
+        "number": "37",
+        "name": "John Wyrostek",
+        "notes": ""
+    },
+    {
+        "number": "38",
+        "name": "Emil \"The Antelope\"",
+        "notes": ""
+    },
+    {
+        "number": "39",
+        "name": "Bill Goodman",
+        "notes": "RC"
+    },
+    {
+        "number": "40",
+        "name": "George \"Red\" Munger",
+        "notes": "RC"
+    },
+    {
+        "number": "41",
+        "name": "Lou Brissie",
+        "notes": "RC"
+    },
+    {
+        "number": "42",
+        "name": "Walter \"Hoot\" Evers",
+        "notes": "RC"
+    },
+    {
+        "number": "43",
+        "name": "Dale Mitchell",
+        "notes": "RC"
+    },
+    {
+        "number": "44",
+        "name": "Dave Philley",
+        "notes": "RC"
+    },
+    {
+        "number": "45",
+        "name": "Wally Westlake",
+        "notes": "RC"
+    },
+    {
+        "number": "46",
+        "name": "Robin Roberts",
+        "notes": "RC"
+    },
+    {
+        "number": "47",
+        "name": "Johnny Sain",
+        "notes": ""
+    },
+    {
+        "number": "48",
+        "name": "Willard Marshall",
+        "notes": ""
+    },
+    {
+        "number": "49",
+        "name": "Frank Shea",
+        "notes": ""
+    },
+    {
+        "number": "50",
+        "name": "Jackie Robinson",
+        "notes": "RC"
+    },
+    {
+        "number": "51",
+        "name": "Herman Wehmeier",
+        "notes": ""
+    },
+    {
+        "number": "52",
+        "name": "Johnny Schmitz",
+        "notes": "RC"
+    },
+    {
+        "number": "53",
+        "name": "Jack Kramer",
+        "notes": "RC"
+    },
+    {
+        "number": "54",
+        "name": "Marty \"Slats\" Marion",
+        "notes": ""
+    },
+    {
+        "number": "55",
+        "name": "Eddie Joost",
+        "notes": ""
+    },
+    {
+        "number": "56",
+        "name": "Pat Mullin",
+        "notes": "RC"
+    },
+    {
+        "number": "57",
+        "name": "Gene Bearden",
+        "notes": "RC"
+    },
+    {
+        "number": "58",
+        "name": "Bob Elliott",
+        "notes": ""
+    },
+    {
+        "number": "59",
+        "name": "Jack \"Lucky\" Lohrke",
+        "notes": ""
+    },
+    {
+        "number": "60",
+        "name": "Larry \"Yogi\" Berra",
+        "notes": ""
+    },
+    {
+        "number": "61",
+        "name": "Rex Barney",
+        "notes": ""
+    },
+    {
+        "number": "62",
+        "name": "Grady Hatton RC,",
+        "notes": "UER"
+    },
+    {
+        "number": "63",
+        "name": "Andy Pafko",
+        "notes": "RC"
+    },
+    {
+        "number": "64",
+        "name": "Dom DiMaggio",
+        "notes": ""
+    },
+    {
+        "number": "65",
+        "name": "Enos \"Country\" Slaug",
+        "notes": ""
+    },
+    {
+        "number": "66",
+        "name": "Elmer Valo",
+        "notes": "RC"
+    },
+    {
+        "number": "67",
+        "name": "Alvin Dark RC,",
+        "notes": "UER"
+    },
+    {
+        "number": "68",
+        "name": "Sheldon \"Available\"",
+        "notes": ""
+    },
+    {
+        "number": "69",
+        "name": "Tommy Henrich",
+        "notes": ""
+    },
+    {
+        "number": "70",
+        "name": "Carl Furillo",
+        "notes": "RC"
+    },
+    {
+        "number": "71",
+        "name": "Vern \"Junior\" Stephe",
+        "notes": "RC"
+    },
+    {
+        "number": "72",
+        "name": "Tommy Holmes",
+        "notes": "RC"
+    },
+    {
+        "number": "73",
+        "name": "Billy Cox",
+        "notes": "RC"
+    },
+    {
+        "number": "74",
+        "name": "Tom McBride",
+        "notes": "RC"
+    },
+    {
+        "number": "75",
+        "name": "Eddie Mayo",
+        "notes": "RC"
+    },
+    {
+        "number": "76",
+        "name": "Bill Nicholson",
+        "notes": "RC"
+    },
+    {
+        "number": "77",
+        "name": "Ernie \"Jumbo & Tiny\"",
+        "notes": "RC"
+    },
+    {
+        "number": "78 a",
+        "name": "Sam Zoldak RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "78 b",
+        "name": "Sam Zoldak RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "79",
+        "name": "Ron Northey",
+        "notes": "RC"
+    },
+    {
+        "number": "80",
+        "name": "Bill McCahan",
+        "notes": ""
+    },
+    {
+        "number": "81",
+        "name": "Virgil \"Red\" Stallcu",
+        "notes": "RC"
+    },
+    {
+        "number": "82",
+        "name": "Joe Page",
+        "notes": ""
+    },
+    {
+        "number": "83 a",
+        "name": "Bob Scheffing RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "83 b",
+        "name": "Bob Scheffing RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "84",
+        "name": "Roy Campanella",
+        "notes": "RC"
+    },
+    {
+        "number": "85 a",
+        "name": "Johnny \"Big John\" Mi",
+        "notes": "VAR"
+    },
+    {
+        "number": "85 b",
+        "name": "Johnny \"Big John\" Mi",
+        "notes": "VAR"
+    },
+    {
+        "number": "86",
+        "name": "Johnny Pesky",
+        "notes": "RC"
+    },
+    {
+        "number": "87",
+        "name": "Randy Gumpert",
+        "notes": "RC"
+    },
+    {
+        "number": "88 a",
+        "name": "Bill Salkeld RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "88 b",
+        "name": "Bill Salkeld RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "89",
+        "name": "Mizell \"Whitie\" Plat",
+        "notes": "RC"
+    },
+    {
+        "number": "90",
+        "name": "Gil Coan",
+        "notes": "RC"
+    },
+    {
+        "number": "91",
+        "name": "Dick Wakefield",
+        "notes": "RC"
+    },
+    {
+        "number": "92",
+        "name": "Willie \"Puddin-Head\"",
+        "notes": "RC"
+    },
+    {
+        "number": "93",
+        "name": "Ed Stevens",
+        "notes": "RC"
+    },
+    {
+        "number": "94",
+        "name": "James \"Mickey\" Verno",
+        "notes": "RC"
+    },
+    {
+        "number": "95",
+        "name": "Howie Pollet",
+        "notes": "RC"
+    },
+    {
+        "number": "96",
+        "name": "Taft Wright",
+        "notes": ""
+    },
+    {
+        "number": "97",
+        "name": "Danny Litwhiler",
+        "notes": "RC"
+    },
+    {
+        "number": "98 a",
+        "name": "Phil Rizzuto",
+        "notes": "VAR"
+    },
+    {
+        "number": "98 b",
+        "name": "Phil Rizzuto",
+        "notes": "VAR"
+    },
+    {
+        "number": "98 c",
+        "name": "Phil Rizzuto",
+        "notes": "VAR"
+    },
+    {
+        "number": "99",
+        "name": "Frank Gustine",
+        "notes": "RC"
+    },
+    {
+        "number": "100",
+        "name": "Gil Hodges",
+        "notes": "RC"
+    },
+    {
+        "number": "101",
+        "name": "Sid Gordon",
+        "notes": ""
+    },
+    {
+        "number": "102",
+        "name": "Stan Spence",
+        "notes": "RC"
+    },
+    {
+        "number": "103",
+        "name": "Joe Tipton",
+        "notes": "RC"
+    },
+    {
+        "number": "104",
+        "name": "Ed Stanky",
+        "notes": "RC"
+    },
+    {
+        "number": "105",
+        "name": "Bill Kennedy",
+        "notes": "RC"
+    },
+    {
+        "number": "106",
+        "name": "Jake Early",
+        "notes": "RC"
+    },
+    {
+        "number": "107",
+        "name": "Eddie Lake",
+        "notes": "RC"
+    },
+    {
+        "number": "108",
+        "name": "Ken Heintzelman",
+        "notes": "RC"
+    },
+    {
+        "number": "109 a",
+        "name": "Ed Fitz Gerald RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "109 b",
+        "name": "Ed Fitz Gerald RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "110",
+        "name": "Early Wynn",
+        "notes": "RC"
+    },
+    {
+        "number": "111",
+        "name": "Al \"Red\" Schoendiens",
+        "notes": ""
+    },
+    {
+        "number": "112",
+        "name": "Sam Chapman",
+        "notes": ""
+    },
+    {
+        "number": "113",
+        "name": "Ray Lamanno",
+        "notes": "RC"
+    },
+    {
+        "number": "114",
+        "name": "Allie Reynolds",
+        "notes": ""
+    },
+    {
+        "number": "115",
+        "name": "Emil \"Dutch\" Leonard",
+        "notes": ""
+    },
+    {
+        "number": "116",
+        "name": "Joe Hatten",
+        "notes": "RC"
+    },
+    {
+        "number": "117",
+        "name": "Walker Cooper",
+        "notes": ""
+    },
+    {
+        "number": "118",
+        "name": "Sam Mele",
+        "notes": "RC"
+    },
+    {
+        "number": "119",
+        "name": "Floyd Baker",
+        "notes": "RC"
+    },
+    {
+        "number": "120",
+        "name": "Cliff Fannin",
+        "notes": "RC"
+    },
+    {
+        "number": "121",
+        "name": "Mark Christman",
+        "notes": "RC"
+    },
+    {
+        "number": "122",
+        "name": "George Vico",
+        "notes": "RC"
+    },
+    {
+        "number": "123",
+        "name": "Johnny Blatnik RC,",
+        "notes": "UER"
+    },
+    {
+        "number": "124 a",
+        "name": "Danny Murtaugh RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "124 b",
+        "name": "Danny Murtaugh RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "125",
+        "name": "Ken Keltner",
+        "notes": "RC"
+    },
+    {
+        "number": "126 a",
+        "name": "Al Brazle RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "126 b",
+        "name": "Al Brazle RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "127 a",
+        "name": "Henry \"Heeney\" Majes RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "127 b",
+        "name": "Henry \"Heeney\" Majes RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "128",
+        "name": "Johnny Vander Meer",
+        "notes": ""
+    },
+    {
+        "number": "129",
+        "name": "Bill \"The Bull\" John",
+        "notes": ""
+    },
+    {
+        "number": "130",
+        "name": "Harry \"The Hat\" Walk",
+        "notes": "RC"
+    },
+    {
+        "number": "131",
+        "name": "Paul Lehner",
+        "notes": "RC"
+    },
+    {
+        "number": "132 a",
+        "name": "Al Evans RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "132 b",
+        "name": "Al Evans RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "133",
+        "name": "Aaron Robinson",
+        "notes": "RC"
+    },
+    {
+        "number": "134",
+        "name": "Hank Borowy",
+        "notes": "RC"
+    },
+    {
+        "number": "135",
+        "name": "Stan \"Happy Rabbit\"",
+        "notes": "RC"
+    },
+    {
+        "number": "136",
+        "name": "Henry \"Hank\" Edwards",
+        "notes": "RC"
+    },
+    {
+        "number": "137",
+        "name": "Ted Wilks",
+        "notes": "RC"
+    },
+    {
+        "number": "138",
+        "name": "Warren \"Buddy\" Rosar",
+        "notes": ""
+    },
+    {
+        "number": "139",
+        "name": "Hank \"Bow-Wow\" Arft",
+        "notes": "RC"
+    },
+    {
+        "number": "140",
+        "name": "Rae Scarborough",
+        "notes": "RC"
+    },
+    {
+        "number": "141",
+        "name": "Ulysses \"Tony\" Lupie",
+        "notes": "RC"
+    },
+    {
+        "number": "142",
+        "name": "Eddie Waitkus",
+        "notes": "RC"
+    },
+    {
+        "number": "143 a",
+        "name": "Bob Dillinger RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "143 b",
+        "name": "Bob Dillinger RC,",
+        "notes": "VAR"
+    },
+    {
+        "number": "144",
+        "name": "Milton \"Mickey\" Haef",
+        "notes": "RC"
+    },
+    {
+        "number": "145",
+        "name": "Sylvester \"Blix\" Don",
+        "notes": "RC"
+    },
+    {
+        "number": "146",
+        "name": "Myron \"Mike\" McCormi",
+        "notes": "RC"
+    },
+    {
+        "number": "147",
+        "name": "Elmer \"Bert\" Singlet",
+        "notes": "RC"
+    },
+    {
+        "number": "148",
+        "name": "Bob Swift",
+        "notes": "RC"
+    },
+    {
+        "number": "149",
+        "name": "Roy Partee",
+        "notes": "RC"
+    },
+    {
+        "number": "150",
+        "name": "Alfred \"Allie\" Clark",
+        "notes": "RC"
+    },
+    {
+        "number": "151",
+        "name": "Maurice \"Mickey\" Har",
+        "notes": "RC"
+    },
+    {
+        "number": "152",
+        "name": "Clarence Maddern",
+        "notes": "RC"
+    },
+    {
+        "number": "153",
+        "name": "Phil Masi",
+        "notes": "RC"
+    },
+    {
+        "number": "154",
+        "name": "Clint Hartung",
+        "notes": ""
+    },
+    {
+        "number": "155",
+        "name": "Fermin \"Mickey\" Guer",
+        "notes": "RC"
+    },
+    {
+        "number": "156",
+        "name": "Al \"Zeke\" Zarilla",
+        "notes": "RC"
+    },
+    {
+        "number": "157",
+        "name": "Walt Masterson",
+        "notes": "RC"
+    },
+    {
+        "number": "158",
+        "name": "Harry \"The Cat\" Brec",
+        "notes": "RC"
+    },
+    {
+        "number": "159",
+        "name": "Glen Moulder",
+        "notes": "RC"
+    },
+    {
+        "number": "160",
+        "name": "Jim Blackburn",
+        "notes": "RC"
+    },
+    {
+        "number": "161",
+        "name": "John \"Jocko\" Thompso",
+        "notes": "RC"
+    },
+    {
+        "number": "162",
+        "name": "Elwin \"Preacher\" Roe",
+        "notes": "RC"
+    },
+    {
+        "number": "163",
+        "name": "Clyde McCullough",
+        "notes": "RC"
+    },
+    {
+        "number": "164",
+        "name": "Vic Wertz",
+        "notes": "RC"
+    },
+    {
+        "number": "165",
+        "name": "George \"Snuffy\" Stir",
+        "notes": ""
+    },
+    {
+        "number": "166",
+        "name": "Mike Tresh",
+        "notes": "RC"
+    },
+    {
+        "number": "167",
+        "name": "Boris \"Babe\" Martin",
+        "notes": "RC"
+    },
+    {
+        "number": "168",
+        "name": "Doyle Lade",
+        "notes": "RC"
+    },
+    {
+        "number": "169",
+        "name": "Jeff Heath",
+        "notes": "RC"
+    },
+    {
+        "number": "170",
+        "name": "Bill Rigney",
+        "notes": ""
+    },
+    {
+        "number": "171",
+        "name": "Dick Fowler",
+        "notes": "RC"
+    },
+    {
+        "number": "172",
+        "name": "Eddie Pellagrini",
+        "notes": "RC"
+    },
+    {
+        "number": "173",
+        "name": "Eddie Stewart",
+        "notes": "RC"
+    },
+    {
+        "number": "174",
+        "name": "Terry Moore",
+        "notes": "RC"
+    },
+    {
+        "number": "175",
+        "name": "Luke Appling",
+        "notes": ""
+    },
+    {
+        "number": "176",
+        "name": "Ken Raffensberger",
+        "notes": "RC"
+    },
+    {
+        "number": "177",
+        "name": "Stan Lopata",
+        "notes": "RC"
+    },
+    {
+        "number": "178",
+        "name": "Tommy Brown",
+        "notes": "RC"
+    },
+    {
+        "number": "179",
+        "name": "Hugh Casey",
+        "notes": ""
+    },
+    {
+        "number": "180",
+        "name": "Connie Berry",
+        "notes": "RC"
+    },
+    {
+        "number": "181",
+        "name": "Gus Niarhos",
+        "notes": "RC"
+    },
+    {
+        "number": "182",
+        "name": "Hal Peck",
+        "notes": "RC"
+    },
+    {
+        "number": "183",
+        "name": "Lou Stringer",
+        "notes": "RC"
+    },
+    {
+        "number": "184",
+        "name": "Bob Chipman",
+        "notes": "RC"
+    },
+    {
+        "number": "185",
+        "name": "Pete Reiser",
+        "notes": ""
+    },
+    {
+        "number": "186",
+        "name": "John \"Buddy\" Kerr",
+        "notes": ""
+    },
+    {
+        "number": "187",
+        "name": "Phil Marchildon",
+        "notes": "RC"
+    },
+    {
+        "number": "188",
+        "name": "Karl Drews",
+        "notes": "RC"
+    },
+    {
+        "number": "189",
+        "name": "Earl Wooten",
+        "notes": "RC"
+    },
+    {
+        "number": "190",
+        "name": "Jim Hearn",
+        "notes": "RC"
+    },
+    {
+        "number": "191",
+        "name": "Joe Haynes",
+        "notes": "RC"
+    },
+    {
+        "number": "192",
+        "name": "Harry Gumbert",
+        "notes": "UER"
+    },
+    {
+        "number": "193",
+        "name": "Ken Trinkle",
+        "notes": "RC"
+    },
+    {
+        "number": "194",
+        "name": "Ralph Branca",
+        "notes": "RC"
+    },
+    {
+        "number": "195",
+        "name": "Eddie Bockman",
+        "notes": "RC"
+    },
+    {
+        "number": "196",
+        "name": "Fred Hutchinson",
+        "notes": "RC"
+    },
+    {
+        "number": "197",
+        "name": "Johnny Lindell",
+        "notes": ""
+    },
+    {
+        "number": "198",
+        "name": "Steve Gromek",
+        "notes": "RC"
+    },
+    {
+        "number": "199",
+        "name": "Cecil \"Tex\" Hughson",
+        "notes": "RC"
+    },
+    {
+        "number": "200",
+        "name": "Jess Dobernic",
+        "notes": "RC"
+    },
+    {
+        "number": "201",
+        "name": "Sibby Sisti",
+        "notes": "RC"
+    },
+    {
+        "number": "202",
+        "name": "Larry Jansen",
+        "notes": ""
+    },
+    {
+        "number": "203",
+        "name": "Barney McCosky",
+        "notes": ""
+    },
+    {
+        "number": "204",
+        "name": "Bob Savage",
+        "notes": "RC"
+    },
+    {
+        "number": "205",
+        "name": "Dick Sisler",
+        "notes": "RC"
+    },
+    {
+        "number": "206",
+        "name": "Bruce Edwards",
+        "notes": ""
+    },
+    {
+        "number": "207",
+        "name": "Johnny \"Hippity\" Hop",
+        "notes": "RC"
+    },
+    {
+        "number": "208",
+        "name": "Paul \"Dizzy\" Trout",
+        "notes": ""
+    },
+    {
+        "number": "209",
+        "name": "Charlie \"King Kong\"",
+        "notes": ""
+    },
+    {
+        "number": "210",
+        "name": "Joe \"Flash\" Gordon",
+        "notes": "RC"
+    },
+    {
+        "number": "211",
+        "name": "Dave \"Boo\" Ferriss",
+        "notes": "RC"
+    },
+    {
+        "number": "212",
+        "name": "Ralph Hamner",
+        "notes": "RC"
+    },
+    {
+        "number": "213",
+        "name": "Charles \"Red\" Barret",
+        "notes": "RC"
+    },
+    {
+        "number": "214",
+        "name": "Richie Ashburn",
+        "notes": "RC"
+    },
+    {
+        "number": "215",
+        "name": "Kirby Higbe",
+        "notes": ""
+    },
+    {
+        "number": "216",
+        "name": "Lynwood \"Schoolboy\"",
+        "notes": ""
+    },
+    {
+        "number": "217",
+        "name": "Marino Pieretti",
+        "notes": "RC"
+    },
+    {
+        "number": "218",
+        "name": "Dick Kryhoski",
+        "notes": "RC"
+    },
+    {
+        "number": "219",
+        "name": "Virgil \"Fire\" Trucks",
+        "notes": "RC"
+    },
+    {
+        "number": "220",
+        "name": "Johnny McCarthy MGR",
+        "notes": ""
+    },
+    {
+        "number": "221",
+        "name": "Bob Muncrief",
+        "notes": "RC"
+    },
+    {
+        "number": "222",
+        "name": "Alex Kellner",
+        "notes": "RC"
+    },
+    {
+        "number": "223",
+        "name": "Bob Hofman",
+        "notes": "RC"
+    },
+    {
+        "number": "224",
+        "name": "Leroy \"Satchel\" Paig RC,",
+        "notes": "UER"
+    },
+    {
+        "number": "225",
+        "name": "Jerry Coleman RC,",
+        "notes": "UER"
+    },
+    {
+        "number": "226",
+        "name": "Edwin \"Duke\" Snider",
+        "notes": "RC"
+    },
+    {
+        "number": "227",
+        "name": "Fritz Ostermueller",
+        "notes": ""
+    },
+    {
+        "number": "228",
+        "name": "Jackie Mayo",
+        "notes": "RC"
+    },
+    {
+        "number": "229",
+        "name": "Ed Lopat",
+        "notes": "RC"
+    },
+    {
+        "number": "230",
+        "name": "Augie Galan",
+        "notes": ""
+    },
+    {
+        "number": "231",
+        "name": "Earl Johnson",
+        "notes": "RC"
+    },
+    {
+        "number": "232",
+        "name": "George McQuinn",
+        "notes": ""
+    },
+    {
+        "number": "233",
+        "name": "Larry Doby",
+        "notes": "RC"
+    },
+    {
+        "number": "234",
+        "name": "Truett \"Rip\" Sewell",
+        "notes": "RC"
+    },
+    {
+        "number": "235",
+        "name": "Jim Russell",
+        "notes": "RC"
+    },
+    {
+        "number": "236",
+        "name": "Fred Sanford",
+        "notes": "RC"
+    },
+    {
+        "number": "237",
+        "name": "Monte Kennedy",
+        "notes": "RC"
+    },
+    {
+        "number": "238",
+        "name": "Bob Lemon",
+        "notes": "RC"
+    },
+    {
+        "number": "239",
+        "name": "Frank McCormick",
+        "notes": ""
+    },
+    {
+        "number": "240",
+        "name": "Norman \"Babe\" Young",
+        "notes": "UER"
+    },
+    {
+        "number": "1949",
+        "name": "Bowman Baseball",
+        "notes": ""
+    }
+]
+}

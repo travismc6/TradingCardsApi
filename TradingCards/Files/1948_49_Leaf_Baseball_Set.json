@@ -1,11 +1,31 @@
 {
-  "Year": 1954,
-  "Brand": "Topps",
-  "Name": "Topps",
-  "Description": "The Topps baseball card set was released in 1954. The set consisted of 250 baseball cards and each card from the 1954 Topps baseball card set is listed below",
-  "ExternalImageFrontBaseUrl": "https://www.tcdb.com/Images/Cards/Baseball/33/33-{number}Fr.jpg",
-  "ExternalImageBackBaseUrl": "https://www.tcdb.com/Images/Cards/Baseball/33/33-{number}Bk.jpg",
-  "Cards": [
+    "Year": "1948",
+    "Brand": "Leaf",
+    "Name": "Leaf",
+    "Description": "The first post-World War II set to feature color pictures. Includes key rookie and veteran cards.",
+    "Card_Details": {
+        "Size": "2-3/8\" by 2-7/8\"",
+        "Design": "Player against a vividly colored background. Name in a solid-colored box below picture.",
+        "Back": "Player's biographical info and a brief write-up. Ad for All-Star Baseball Gum at the bottom."
+    },
+    "Notable_Cards": [
+        "Jackie Robinson",
+        "Satchel Paige",
+        "Babe Ruth",
+        "Joe DiMaggio",
+        "Ted Williams",
+        "Honus Wagner"
+    ],
+    "Set_Composition": {
+        "Total_Cards": 98,
+        "Short_Prints": "Almost half the set",
+        "Variations": [
+            "Gene Hermanski with/without the last 'i'",
+            "Cliff Aberson different sleeve lengths",
+            "Kent Peterson red or dark cap"
+        ]
+    },
+    "Cards": [
     {
       "number": "1",
       "name": "Joe Di Maggio"

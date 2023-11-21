@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using TradingCards.Helpers;
 using TradingCards.Models.Domain;
 using TradingCards.Models.Dtos;
 
@@ -90,7 +91,7 @@ namespace TradingCards.Persistence
 
             if (collectionId == null)
             {
-                return await (from card in _context.Cards
+                return (await (from card in _context.Cards
                               where (!userParams.Year.HasValue || card.CardSet.Year == userParams.Year.Value)
                               && (userParams.Brands == null || !userParams.Brands!.Any() || userParams.Brands!.Contains(card.CardSet.BrandId))
                               && (string.IsNullOrEmpty(userParams.Name) || card.Name.ToLower().Contains(userParams.Name.ToLower()))
@@ -105,11 +106,11 @@ namespace TradingCards.Persistence
                                   BrandName = card.CardSet.Brand.Name,
                                   Year = card.CardSet.Year,
                                   InCollection = false
-                              }).ToListAsync();
+                              }).ToListAsync()).OrderBy(r => r.Year).ThenBy(r => r.BrandName).ThenBy(r => r.Number, new NumberComparer()).ToList();
             }
             else
             {
-                return await (from card in _context.Cards
+                return (await (from card in _context.Cards
                               where (!userParams.Year.HasValue || card.CardSet.Year == userParams.Year.Value)
                               && (userParams.Brands == null || !userParams.Brands!.Any() || userParams.Brands!.Contains(card.CardSet.BrandId))
                               && (string.IsNullOrEmpty(userParams.Name) || card.Name.ToLower().Contains(userParams.Name.ToLower()))
@@ -133,7 +134,7 @@ namespace TradingCards.Persistence
                                   InCollection = collectionCard != null,
                                   FrontImageUrl = collectionCard != null ? collectionCard.FrontImageUrl : null,
                                   BackImageUrl = collectionCard != null ? collectionCard.BackImageUrl : null
-                              }).ToListAsync();
+                              }).ToListAsync()).OrderBy(r => r.Year).ThenBy(r => r.BrandName).ThenBy(r => r.Number, new NumberComparer()).ToList();
             }
         }
 

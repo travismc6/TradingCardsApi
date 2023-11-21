@@ -31,6 +31,11 @@ namespace TradingCards.Persistence
                 {
                     Name = "UpperDeck",
                     Id = 3
+                },
+                new Brand()
+                {
+                    Name = "Leaf",
+                    Id = 4
                 }
             });
         }

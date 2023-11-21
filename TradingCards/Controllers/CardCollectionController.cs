@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using TradingCards.Helpers;
+using TradingCards.Models.Domain;
 using TradingCards.Models.Dtos;
 using TradingCards.Persistence;
 using TradingCards.Services;
@@ -15,11 +17,15 @@ namespace TradingCards.Controllers
     {
         private readonly ICardsRepository _repo;
         private readonly IImageService _imageService;
+        private readonly IImportExportService _exportService;
 
-        public CardCollectionController(ICardsRepository repo, IImageService imageService)
+
+        public CardCollectionController(ICardsRepository repo, IImageService imageService, IImportExportService exportService)
         {
             _repo = repo;
             _imageService = imageService;
+            _exportService = exportService;
+
         }
 
         [HttpGet("{id}")]
@@ -131,6 +137,49 @@ namespace TradingCards.Controllers
             var result = await _repo.GetCollectionSetDetails(id, userId);
 
             return Ok(result);
+        }
+
+        [HttpGet("export")]
+        public async Task<IActionResult> ExportChecklist([FromQuery] CardParams cardParams)
+        {
+            var user = HttpContext.User;
+            cardParams.UserId = user.FindFirst("id")?.Value;
+            cardParams.InCollection = true;
+
+            var cards = await _repo.GetChecklistCards(cardParams);
+
+            var result = _exportService.ExportCollection(cards.ToList());
+
+            return File(result, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "cards.xlsx");
+        }
+
+        [HttpPost("import")]
+        public async Task<IActionResult> ImportCards(IFormFile file)
+        {
+            //// TODO: Must have admin role
+
+            //if (file == null || file.Length == 0)
+            //{
+            //    return BadRequest("No file uploaded.");
+            //}
+
+            //CardSet set;
+            //using (var reader = new StreamReader(file.OpenReadStream()))
+            //{
+            //    var fileContent = await reader.ReadToEndAsync();
+            //    set = JsonConvert.DeserializeObject<CardSet>(fileContent);
+            //    set.BrandId = (await _db.Brands.FirstOrDefaultAsync(r => set.Name.StartsWith(r.Name))).Id;
+            //}
+
+            //if (_db.CardSets.Any(r => r.BrandId == set.BrandId && r.Year == set.Year && r.Name == set.Name))
+            //{
+            //    return BadRequest("Set already exists");
+            //}
+            //await _db.CardSets.AddAsync(set);
+            //await _db.SaveChangesAsync();
+
+            //return Ok(set);
+            return Ok();
         }
     }
 }
