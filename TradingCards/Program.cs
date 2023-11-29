@@ -10,6 +10,7 @@ using System.Text;
 using Microsoft.OpenApi.Models;
 using TradingCards.Services;
 using Docker.DotNet.Models;
+using System.Security.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -137,7 +138,24 @@ app.UseCors(opt =>
 
 
 app.UseAuthentication();
+
+app.Use(async (context, next) =>
+{
+    try
+    {
+        
+        await next.Invoke();
+    }
+    catch (AuthenticationException)
+    {
+        context.Response.StatusCode = 401; // Unauthorized
+        await context.Response.WriteAsync("Token is expired");
+    }
+});
+
 app.UseAuthorization();
+
+
 
 app.MapControllers();
 app.MapFallbackToController("Index", "Fallback");

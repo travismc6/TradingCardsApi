@@ -1,4 +1,5 @@
-﻿using TradingCards.Models.Dtos;
+﻿using TradingCards.Models.Domain;
+using TradingCards.Models.Dtos;
 
 namespace TradingCards.Persistence
 {
@@ -12,5 +13,10 @@ namespace TradingCards.Persistence
         Task<int> DuplicateCard(int id, string userId);
         Task<bool> SaveCollection(CollectionChangesDto collectionChanges);
         Task<CollectionDetailsDto> GetCollectionSetDetails(int id, string userId);
+
+        Task<Card?> FindCard(string number, int year, string brand, string set);
+        Task<Collection?> GetCollection(string userId);
+
+        Task<bool> SaveCollection(List<CollectionCard> cards, string userId, bool overwrite);
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TradingCards.Models.Dtos;
 using TradingCards.Persistence;
 
@@ -27,6 +28,7 @@ namespace TradingCards.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> SaveChecklistCards(CollectionChangesDto collectionChanges)
         {
             var user = HttpContext.User;

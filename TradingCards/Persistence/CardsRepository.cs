@@ -17,7 +17,7 @@ namespace TradingCards.Persistence
         public async Task<CollectionCardDto> GetCollectionCard(int id, string userId)
         {
             // if card is not in collection (or another collection), return error
-            var collection = _context.Collections.FirstOrDefault(u => u.UserId == userId);
+            var collection = await GetCollection(userId);
 
             var collectionCard = await _context.CollectionCards.Include(r => r.Card).Include(r => r.Card.CardSet).FirstOrDefaultAsync(r => r.CollectionId == collection.Id && r.Id == id);
 
@@ -45,7 +45,7 @@ namespace TradingCards.Persistence
 
         public async Task<CollectionCardDto> SaveCard(CollectionCardDto card, string userId)
         {
-            var collection = _context.Collections.FirstOrDefault(u => u.UserId == userId);
+            var collection = await GetCollection(userId);
 
             var collectionCard = await _context.CollectionCards.FirstOrDefaultAsync(r => r.Id == card.Id);
 
@@ -140,7 +140,7 @@ namespace TradingCards.Persistence
 
         public async Task<bool> SaveCollection(CollectionChangesDto collectionChanges)
         {
-            var collection = _context.Collections.FirstOrDefault(u => u.UserId == collectionChanges.UserId);
+            var collection = await GetCollection(collectionChanges.UserId);
 
             if (collectionChanges.Added != null)
             {
@@ -174,7 +174,7 @@ namespace TradingCards.Persistence
         public async Task<bool> DeleteCard(int id, string userId)
         {
             // if card is not in collection (or another collection), return error
-            var collection = _context.Collections.FirstOrDefault(u => u.UserId == userId);
+            var collection = await GetCollection(userId);
 
             var collectionCard = await _context.CollectionCards.Include(r => r.Card).Include(r => r.Card.CardSet).FirstOrDefaultAsync(r => r.CollectionId == collection.Id && r.Id == id);
 
@@ -195,7 +195,7 @@ namespace TradingCards.Persistence
         public async Task<int> DuplicateCard(int id, string userId)
         {
             // if card is not in collection (or another collection), return error
-            var collection = _context.Collections.FirstOrDefault(u => u.UserId == userId);
+            var collection = await GetCollection(userId);
 
             var collectionCard = await _context.CollectionCards.Include(r => r.Card).Include(r => r.Card.CardSet).FirstOrDefaultAsync(r => r.CollectionId == collection.Id && r.Id == id);
 
@@ -219,7 +219,7 @@ namespace TradingCards.Persistence
 
         public async Task<CollectionDetailsDto> GetCollectionSetDetails(int id, string userId)
         {
-            var collection = _context.Collections.FirstOrDefault(u => u.UserId == userId);
+            var collection = await GetCollection(userId);
 
             if (collection == null)
             {
@@ -249,6 +249,38 @@ namespace TradingCards.Persistence
             details.CollectionSets = query.OrderBy(r => r.SetYear).ThenBy(r => r.SetName).ToList();
 
             return details;
+        }
+
+        public async Task<Card?> FindCard(string number, int year, string brand, string set)
+        {
+            return await _context.Cards.Include(r => r.CardSet).Include(r => r.CardSet.Brand).Where(r => r.Number == number && r.CardSet.Name.ToLower() == set.ToLower()
+                                  && r.CardSet.Year == year && r.CardSet.Brand.Name.ToLower() == brand.ToLower()).FirstOrDefaultAsync();
+        }
+
+        public async Task<Collection?> GetCollection(string userId)
+        {
+            return await _context.Collections.FirstOrDefaultAsync(u => u.UserId == userId);
+        }
+
+        public async Task<bool> SaveCollection(List<CollectionCard> cards, string userId, bool overwrite)
+        {
+            var collection = await GetCollection(userId);
+
+            if (collection == null)
+            {
+                throw new InvalidOperationException("Cannot find Collection.");
+            }
+
+            if (overwrite)
+            {
+                var existingCards = _context.CollectionCards.Where(r => r.CollectionId == collection.Id);
+                _context.CollectionCards.RemoveRange(existingCards);
+            }
+
+            await _context.CollectionCards.AddRangeAsync(cards);
+
+            await _context.SaveChangesAsync();
+            return true;
         }
     }
 }

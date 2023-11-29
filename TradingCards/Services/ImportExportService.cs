@@ -3,11 +3,19 @@ using OfficeOpenXml;
 using System.IO;
 using TradingCards.Models.Domain;
 using TradingCards.Models.Dtos;
+using TradingCards.Persistence;
 
 namespace TradingCards.Services
 {
     public class ImportExportService : IImportExportService
     {
+        private ICardsRepository _cardsRepository { get; set; }
+
+        public ImportExportService(ICardsRepository cardsRepository)
+        {
+            _cardsRepository = cardsRepository;
+        }
+
         public MemoryStream ExportCollection(List<ChecklistCardDto> cards)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
@@ -55,13 +63,19 @@ namespace TradingCards.Services
             return stream;
         }
 
-        public IEnumerable<ChecklistCardDto> ImportCollection(IFormFile file)
+        public async Task<ImportDetailsDto> ImportCollection(IFormFile file, string userId)
         {
-            var cards = new List<Card>();
+            var importDetails = new ImportDetailsDto();
+
+            var collection = await _cardsRepository.GetCollection(userId);
+
+            var cards = new List<CollectionCard>();
 
             using (var stream = new MemoryStream())
             {
                 file.CopyTo(stream);
+
+                ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
                 using (var package = new ExcelPackage(stream))
                 {
@@ -70,20 +84,45 @@ namespace TradingCards.Services
 
                     for (int row = 2; row <= rowCount; row++)
                     {
-                        //cards.Add(new Card
-                        //{
-                        //    Name = worksheet.Cells[row, 1].Value.ToString().Trim(),
-                        //    Age = int.Parse(worksheet.Cells[row, 2].Value.ToString().Trim()),
-                        //    Email = worksheet.Cells[row, 3].Value.ToString().Trim()
-                        //});
+                        var number = worksheet.Cells[row, 1].Value?.ToString()?.Trim();
+                        var year = worksheet.Cells[row, 2].Value;
+                        var brand = worksheet.Cells[row, 3].Value?.ToString()?.Trim();
+                        var set = worksheet.Cells[row, 4].Value?.ToString()?.Trim();
+                        var name = worksheet.Cells[row, 5].Value?.ToString()?.Trim();
+                        var notes = worksheet.Cells[row, 6].Value?.ToString()?.Trim();
+                        var grade = worksheet.Cells[row, 7].Value?.ToString()?.Trim();
+                        var frontImageUrl = worksheet.Cells[row, 8].Value?.ToString()?.Trim();
+                        var backImageUrl = worksheet.Cells[row, 9].Value?.ToString()?.Trim();
+
+                        var card = await _cardsRepository.FindCard(number, Convert.ToInt32(year), brand, set);
+
+                        if (card != null)
+                        {
+                            var collectionCard = new CollectionCard()
+                            {
+                                CardId = card.Id,
+                                Grade = grade != null ? Convert.ToDouble(grade) : null,
+                                CollectionId = collection.Id,
+                                BackImageUrl = backImageUrl,
+                                FrontImageUrl = frontImageUrl,
+                                Notes = notes
+                            };
+
+                            cards.Add(collectionCard);
+                            importDetails.Imported++;
+                        } 
+                        else
+                        {
+                            importDetails.Failed++;
+                        }
                     }
+
+                    // save
+                    var result = await _cardsRepository.SaveCollection(cards, userId, true);
                 }
             }
 
-
-
-
-            throw new NotImplementedException();
+            return importDetails;
         }
     }
 }

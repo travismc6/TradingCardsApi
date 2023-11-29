@@ -6,6 +6,6 @@ namespace TradingCards.Services
     public interface IImportExportService
     {
         public MemoryStream ExportCollection(List<ChecklistCardDto> cards);
-        public IEnumerable<ChecklistCardDto> ImportCollection(IFormFile file);
+        public Task<ImportDetailsDto> ImportCollection(IFormFile file, string userId);
     }
 }
